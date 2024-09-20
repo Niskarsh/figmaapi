@@ -146,7 +146,7 @@ async function testWithOauth() {
 async function generateUrl() {
     const baseUrl = 'https://www.figma.com/oauth';
     const params = {
-        client_id: 'bD1anmj9olDZpiAFJGtQ4b',
+        client_id: process.env.FIGMA_OAUTH_CLIENT_ID, 
         redirect_uri: 'https://webhook.site/7d6eadae-cd4a-4aac-905a-c6e2c829b022',
         scope: 'files:read',
         state: 'abc',
@@ -164,7 +164,7 @@ async function getAccessToken() {
         client_id: process.env.FIGMA_OAUTH_CLIENT_ID,           // Replace with actual client_id
         client_secret: process.env.FIGMA_OAUTH_CLIENT_SECRET,   // Replace with actual client_secret
         redirect_uri: 'https://webhook.site/7d6eadae-cd4a-4aac-905a-c6e2c829b022',         // Replace with actual redirect_uri
-        code: 'WXD5pFBajCDNpIgIt2Sob9V1B',                     // Replace with the authorization code
+        code: process.env.FIGMA_OAUTH_CODE,                     // Replace with the authorization code
         grant_type: 'authorization_code',
     });
 
