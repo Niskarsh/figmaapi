@@ -130,7 +130,6 @@ async function getImagesFromFile() {
 
 async function testWithOauth() {
     const fileKey = 'Ig0BYKoaXi5NA90poR04Gc';
-    const oAuthToken = 'figu_2ebj8sUv_dUp4L_AkVgsHmm9nj1EOfOLkRiC36Ob';
     let response = await axios.get(`https://api.figma.com/v1/files/${fileKey}`, {
         headers: {
             'Authorization': `Bearer ${oAuthToken}`
